@@ -1,17 +1,25 @@
 >**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
 
 ### Date created
-Include the date you created this project and README file.
+12/10/2024
 
 ### Project Title
-Replace the Project Title
+Github Project
 
 ### Description
-Describe what your project is about and what it does
+This project is focused on getting familiar with GitHub and Git commands. The goal is to learn how to:
+
+-Clone a repository from GitHub
+-Add files to the repository
+-Commit changes to the repository
+-Push the changes to a remote GitHub repository
+-Create a new branch 
 
 ### Files used
-Include the files used
+The used files are Bikeshare.py and 3 data files  washington.csv ,new_york_city.csv and chicago.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+The project is inspired by the Udacity repository on GitHub, which was used as a reference for this hands-on project.
+
+The original Udacity repository can be found here: Udacity Repository Link.
 
