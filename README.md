@@ -16,7 +16,7 @@ This project is focused on getting familiar with GitHub and Git commands. The go
 -Create a new branch 
 
 ### Files used
-The used files are Bikeshare.py and 3 data files  washington.csv ,new_york_city.csv and chicago.csv
+The project utilizes the Bikeshare.py script along with three data files: washington.csv, new_york_city.csv, and chicago.csv.
 
 ### Credits
 The project is inspired by the Udacity repository on GitHub, which was used as a reference for this hands-on project.
