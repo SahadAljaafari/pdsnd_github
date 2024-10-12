@@ -50,6 +50,8 @@ def get_filters():
     print('-'*40)
     return city, month, day
 
+# This function loads the data based on the filtered option entered by the user.
+
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
