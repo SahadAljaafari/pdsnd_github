@@ -197,34 +197,50 @@ def user_stats(df):
     print('-'*40)
 
 try:
+    # Main loop to keep the program running until the user decides to exit
     while True:
-        # Get user inputs for city, month, day
+        # Get user inputs for city, month, and day
         city, month, day = get_filters()
+        
+        # Load the filtered data based on user inputs
         df = load_data(city, month, day)
 
-        while df.empty:  
+        # Loop to handle cases when the dataset is empty due to unavailable month or day
+        while df.empty:
+            # Prompt user to either re-enter inputs or exit
             i = input('Sorry, the month or the day you chose is not available. Please enter 1 for new or 0 to exit: ')
             
+            # If the user enters '0', exit the program
             if i == '0':
                 print("Exiting the program...")
-                sys.exit() 
+                sys.exit()  # Terminates the program
 
+            # If the user enters '1', re-run the filters and reload the data
             elif i == '1':
-                # Re-run the filters and load data again
-                city, month, day = get_filters()
-                df = load_data(city, month, day)
+                city, month, day = get_filters()  # Get new filters from the user
+                df = load_data(city, month, day)  # Load the new dataset based on inputs
+
+            # If the user provides an invalid input, show an error message
             else:
                 print("Incorrect input. Please enter a valid value.")
-        print(df)
-        trip_duration_stats(df)
-        time_stats(df)
-        station_stats(df)
-        user_stats(df)
-        
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
-            sys.exit()
 
+        # Display the dataframe for the filtered city, month, and day
+        print(df)
+
+        # Call functions to calculate and display statistics
+        trip_duration_stats(df)  # Calculate and display trip duration stats
+        time_stats(df)           # Calculate and display stats on the most common times
+        station_stats(df)        # Calculate and display stats on the most popular stations
+        user_stats(df)           # Calculate and display user stats
+
+        # Ask the user if they want to restart the program
+        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        
+        # If the user does not want to restart, exit the program
+        if restart.lower() != 'yes':
+            sys.exit()  # Terminates the program
+
+# This block is executed when sys.exit() is called to terminate the program
 except SystemExit:
-    pass 
+    pass  # Suppress the SystemExit exception to avoid traceback messages
 
